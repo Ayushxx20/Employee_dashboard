@@ -46,23 +46,6 @@ const App = () => {
       })
       localStorage.setItem('employees', JSON.stringify(employees))
     }
-
-    const loggedInUser = localStorage.getItem("loggedInUser")
-    if (loggedInUser) {
-      try {
-        const userData = JSON.parse(loggedInUser)
-        if (userData && userData.role) {
-          setUser(userData.role)
-          if (userData.data) {
-            const updatedEmployee = employees.find(emp => emp.email === userData.data.email)
-            setloogedInUserData(updatedEmployee || userData.data)
-          }
-        }
-      } catch (error) {
-        console.error('Error parsing localStorage data:', error)
-        localStorage.removeItem('loggedInUser')
-      }
-    }
   }, [])
 
 

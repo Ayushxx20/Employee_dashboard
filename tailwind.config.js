@@ -1,7 +1,3 @@
-import forms from '@tailwindcss/forms'
-import typography from '@tailwindcss/typography'
-plugins: [forms, typography]
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -23,19 +19,8 @@ export default {
           800: '#166534',
           900: '#14532d',
         }
-      },
-      fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'Noto Sans', 'sans-serif'],
-        heading: ['Poppins', 'ui-sans-serif', 'system-ui']
-      },
-      boxShadow: {
-        card: '0 10px 25px rgba(2,6,23,0.7)'
       }
     },
-    container: {
-      center: true,
-      padding: '1rem',
-    }
   },
-  plugins: [forms, typography],
+  plugins: [],
 }
